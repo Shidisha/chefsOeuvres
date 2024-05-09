@@ -15,6 +15,7 @@ import RecommendedProprety from './components/recommended_proprety.jsx'
 import NeardYou from './components/neard_you.jsx'
 import Authentification from './pages/public/auth/authentification.jsx'
 import LoginPage from './pages/public/auth/loginPage.jsx'
+import SignupPage from './pages/public/auth/signupPage.jsx'
 
 const router = createBrowserRouter([
   
@@ -77,7 +78,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/signupPage',
-        element:<LoginPage/>,
+        element:<SignupPage/>,
       }
     ]
 },
