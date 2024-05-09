@@ -2,6 +2,7 @@ import data from '../data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
 
 const SectionHero = () => {
     return(
@@ -17,7 +18,7 @@ const SectionHero = () => {
                     </button>
                     <button className=' flex items-center border border-black rounded-full px-1 py-2 gap-1'>
                         <FontAwesomeIcon icon={faUpload}/>
-                        <p>Publier une propriété</p>
+                        <NavLink to='/pagePublication'><p>Publier une propriété</p></NavLink>
                     </button>
                 </div>
             </div>

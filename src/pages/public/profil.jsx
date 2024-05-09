@@ -4,6 +4,7 @@ import { faPen } from "@fortawesome/free-solid-svg-icons"
 import Header from "../../components/header"
 import SideBar from "../../components/sidebar"
 import data from "../../data.json"
+import Footer from "../../components/footer"
 
 const Profil = () => {
     return(
@@ -27,6 +28,7 @@ const Profil = () => {
                     </div>
                
             </main>
+            <Footer/>
         </>
     )
 }

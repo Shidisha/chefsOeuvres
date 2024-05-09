@@ -14,21 +14,28 @@ const SignupPage = () =>{
    // console.log(data);
   };
     return(
-        <div className='w-full h-full bg-cover items-center content-center opacity-90'>
-          <img className=' absolute w-full h-full object-cover'  src={imgBg} alt="image background"/>
-              <div className=' absolute border rounded-[20px] m-96 mt-40 bg-slate-400 opacity-100'>
-                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className=' flex flex-col gap-2 content-center'>
-                      <h3 className=' pt-2 pb-2 font-bold text-white'>Veillez vous inscrire</h3>
-                          <div className=' flex flex-row'>
-                              <input className='p-2 ml-16 mr-16 rounded-full w-40' placeholder='djokadimatshibangu@gmail.com' {...register("username", { required: true })} />
-                              <input className='p-2 ml-16 mr-16 rounded-full w-40' placeholder='djokadimatshibangu@gmail.com' {...register("username", { required: true })} />
+        <div>
+          <img className='absolute w-full h-full object-cover'  src={imgBg} alt="image background"/>
+              <div className='absolute border rounded-[20px] m-96 mt-40 bg-slate-400 opacity-100'>
+                 <form className=' flex flex-col content-center' onSubmit={handleSubmit(onSubmit)}>
+                    <div className=' flex flex-col content-center gap-2'>
+                      <h3 className=' pt-2 pb-2 font-bold text-white text-xl'>Veillez vous inscrire</h3>
+                          <div className=' flex flex-row justify-center gap-6'>
+                              <div className=' flex flex-col gap-2'>
+                                  <input className=' p-2 rounded-full w-32' placeholder='Nom' {...register("userFirstName", { required: true })} />
+                                  {errors.userFirstName && <span className=" text-red-800">Ce champ est requis.</span>}
+                              </div>
+                              <div className='flex flex-col gap-2'>
+                                  <input className='p-2 rounded-full w-32' placeholder='Prénom' {...register("userSecondName", { required: true })} />
+                                  {errors.userSecondName && <span className=" text-red-800">Ce champ est requis.</span>}
+                              </div>
                           </div>
-                        {errors.username && <span className=" text-red-800">Ce champ est requis.</span>}
-                        <input className=' p-2 ml-16 mr-16 rounded-full w-72' placeholder=' ************' type="password" {...register("password", { required: true })} />
-                        {errors.password && <span className=" text-red-800">Ce champ est requis.</span>}
-                        <button className=' border p-2 ml-16 mr-16 rounded-full w-72 bg-red-400 text-white font-extrabold ' type="submit">Valider</button>
-                        <span className=' pb-2 text-white'>Déjà un compte? <NavLink to="/loginPage" className=" text-red-500 underline">Connectez vous</NavLink></span>
+                        <input className=' p-2 ml-16 mr-16 rounded-full w-72' placeholder='djokadimatshibangu@gmail.com' type="email" {...register("email", { required: true })} />
+                          {errors.password && <span className=" text-red-800">Ce champ est requis.</span>}
+                        <input className=' p-2 ml-16 mr-16 rounded-full w-72' placeholder='************' type="password" {...register("password", { required: true })} />
+                          {errors.password && <span className=" text-red-800">Ce champ est requis.</span>}
+                          <button className=' border p-2 ml-16 mr-16 rounded-full w-72 bg-red-400 text-white font-extrabold ' type="submit">Valider</button>
+                          <span className=' pb-2 text-white'>Vous avez un compte? <NavLink to="/loginPage" className=" text-red-500 underline">Connectez vous</NavLink></span>
                     </div>
                   </form>
               </div>

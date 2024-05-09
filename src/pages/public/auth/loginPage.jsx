@@ -18,7 +18,7 @@ const LoginPage = () =>{
               <div className=' absolute border rounded-[20px] m-96 mt-40 bg-slate-400 opacity-100'>
                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className=' flex flex-col gap-2 content-center'>
-                        <h3 className=' pt-2 pb-2 font-bold text-white'>Veillez vous connecter</h3>
+                        <h3 className=' pt-2 pb-2 font-bold text-white text-xl'>Veillez vous connecter</h3>
                         <input className='p-2 ml-16 mr-16 rounded-full w-72' placeholder='djokadimatshibangu@gmail.com' {...register("username", { required: true })} />
                         {errors.username && <span>Ce champ est requis.</span>}
                         <input className=' p-2 ml-16 mr-16 rounded-full w-72' placeholder=' ************' type="password" {...register("password", { required: true })} />

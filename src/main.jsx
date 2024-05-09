@@ -42,8 +42,8 @@ const router = createBrowserRouter([
           {
             path:'/neard_you',
             element: <NeardYou/>
-          }
-        ]
+          },
+        ],
       },  
       {
         path:'/explore',

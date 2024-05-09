@@ -1,3 +1,4 @@
+import Footer from "../../components/footer"
 import Header from "../../components/header"
 import SideBar from "../../components/sidebar"
 
@@ -9,6 +10,7 @@ const Reservation = () =>{
                 <SideBar/>
                 <h3>Votre page des reservation</h3>
            </main>
+           <Footer/>
         </>
     )
 }
